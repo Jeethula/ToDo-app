@@ -7,6 +7,7 @@ export const load = async ()=>{
     // const todos= await db.select().from(todo).orderBy(asc(todo.tag_id))
     // const tags = await db.query.todo_tags.findMany()
     //parallise the above request
+    //haeleo
     const [ todos,tags] = await Promise.all([
         db.select().from(todo).orderBy(asc(todo.tag_id)),
         db.query.todo_tags.findMany()
